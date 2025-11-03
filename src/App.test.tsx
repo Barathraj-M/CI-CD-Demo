@@ -3,6 +3,12 @@ import { describe, it, expect } from 'vitest'
 import App from './App'
 
 describe('App Component', () => {
+    
+  it('renders Hi',()=>{
+    render(<App />)
+    expect(screen.getByText('Hi')).toBeInTheDocument()
+  })
+
   it('renders the title', () => {
     render(<App />)
     expect(screen.getByText(/Vite \+ React/i)).toBeInTheDocument()
